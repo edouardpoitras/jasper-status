@@ -1,7 +1,7 @@
 jasper-status
 =============
 
-Jasper Status Module
+Jasper Status Plugin
 
 ## Installation Steps
 
@@ -9,7 +9,7 @@ Jasper Status Module
 ```
 sudo pip install psutil
 ```
-2. Place the Status.py file in your jasper_directory/client/modules/ folder
+2. Place the status/ folder file in your jasper_directory/plugins/speechhandler/ folder
 3. Restart Jasper
 
 ## Usage
