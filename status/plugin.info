@@ -1,10 +1,10 @@
-  [Plugin]
-  Name = status
-  Version = 1.0.0
-  License = MIT
-~ URL = https://github.com/edouardpoitras/jasper-status
-~ Description = Outputs system status information
+[Plugin]
+Name = status
+Version = 1.0.0
+License = MIT
+URL = https://github.com/edouardpoitras/jasper-status
+Description = Outputs system status information
 
-  [Author]
-~ Name = Edouard Poitras
-~ URL = https://github.com/edouardpoitras
+[Author]
+Name = Edouard Poitras
+URL = https://github.com/edouardpoitras
