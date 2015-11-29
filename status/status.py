@@ -9,7 +9,7 @@ class StatusPlugin(plugin.SpeechHandlerPlugin):
     def get_phrases(self):
         return ["STATUS"]
 
-    def isValid(self, text):
+    def is_valid(self, text):
         """
             Returns True if the text is related to Jasper's status.
 
