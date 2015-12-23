@@ -27,8 +27,14 @@ class StatusPlugin(plugin.SpeechHandlerPlugin):
         disk_percent = psutil.disk_usage('/')[3]
         boot_time = datetime.datetime.fromtimestamp(psutil.boot_time())
         running_since = boot_time.strftime("%A %d. %B %Y")
-        response = "I am currently running on %s version %s.  " %(os, version)
-        response += "This system is named %s and has %s CPU cores.  " %(name, cores)
-        response += "Current CPU utilization is %s percent.  " %cpu_percent
-        response += "Current memory utilization is %s percent." %memory_percent
-        mic.say(response)
+        response = []
+        response.append("I am currently running on %s version %s.  " %
+                        (os, version))
+        response.append("This system is named %s and has %s CPU cores.  " %
+                        (name, cores))
+        response.append("Current CPU utilization is %s percent.  " %
+                        cpu_percent)
+        response.append("Current memory utilization is %s percent." %
+                        memory_percent)
+        self.invoke_all('StatusPlugin_modify_response', response)
+        mic.say('\n'.join(response))
